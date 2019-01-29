@@ -1,0 +1,6 @@
+1548741209817	Rename field 'address'
+1548769090684	Rename field 'email'
+1548769117823	Rename local variable 'email'
+1548769866563	Rename local variable 'email'
+1548769906913	Rename method 'setEmail'
+1548770025825	Rename method 'getEmail'

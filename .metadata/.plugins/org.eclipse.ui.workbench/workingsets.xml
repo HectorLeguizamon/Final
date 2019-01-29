@@ -9,5 +9,9 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/restcrud_parent-master" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RestCrud" type="4"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1548777857296_4" label="Studentcrud_parent" name="Studentcrud_parent">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Studentcrud_parent" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/StudentCrud" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1548435198042_2" label="Window Working Set" name="Aggregate for window 1548435198042"/>
 </workingSetManager>

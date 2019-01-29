@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough" >
+<meta charset="utf-8" name="viewport"
+	content="width=device-width, initial-scale=1"
+	http-equiv="X-UA-Conpatible" />
+<h:head>
+	<title>Create Students</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+	<div class="content" >
+		<h:form id = "createStudent" class="form-horizontal">
+		<div class ="form-group">
+			<div class="col-sm-4"></div> 
+			<div class="col-sm-4">
+				<h2>Create Student Record</h2>
+			</div> 
+	</div>
+	<hr />
+	<div class="form-group">
+		<h:outputLabel for="id" class="control-label col-sm-4">User Id: </h:outputLabel>
+		<div class="col-sm-4">
+			<h:inputText id="id" value="#{studentBean.tid}" 
+				class="form-control" validatorMessage="User name is required" a:placeholder="Enter User Id">
+				<f:validateRequired />
+			</h:inputText>
+		</div>
+	</div>
+	<div class="form-group">
+		<h:outputLabel for="name" class="control-label col-sm-4">User Name: </h:outputLabel>
+		<div class="col-sm-4">
+			<h:inputText id="name" value="#{studentBean.tnombre}" 
+				class="form-control" validatorMessage="User name is required" a:placeholder="Enter User Name">
+				<f:validateRequired />
+			</h:inputText>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<h:outputLabel for="email" class="control-label col-sm-4">Email: </h:outputLabel>
+		<div class="col-sm-4">
+			<h:inputText id="email" value="#{studentBean.tcorreo}"
+				class="form-control" validatorMessage="User name is required" a:placeholder="Enter Email">
+				<f:validateRequired />
+			</h:inputText>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<h:outputLabel for="password" class="control-label col-sm-4">Password: </h:outputLabel>
+		<div class="col-sm-4">
+			<h:inputText id="password" value="#{studentBean.tpassword}"
+				class="form-control" validatorMessage="Password is required" a:placeholder="Enter Password">
+				<f:validateRequired />
+			</h:inputText>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<h:outputLabel for="gender" class="control-label col-sm-4">Gender: </h:outputLabel>
+		<div class="col-sm-4">
+			<h:selectOneMenu id="gender" value="#{studentBean.tgenero}"
+				class="form-control">
+				<f:selectItem itemLabel="Select gender" itemValue="" />
+				<f:selectItem itemLabel="Female" itemValue="F" />
+				<f:selectItem itemLabel="Male" itemValue="M" />
+			</h:selectOneMenu>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<h:outputLabel for="address" class="control-label col-sm-4">Address: </h:outputLabel>
+		<div class="col-sm-4">
+			<h:inputTextarea id="address"
+				 value="#{studentBean.tciudad}" cols="50" rows="5"
+				 class="form-control" validatorMessage="Address name is required" 
+				 a:placeholder="Enter Address">
+				<f:validateRequired />
+			</h:inputTextarea>
+		</div>
+	</div>
+	<br/> <br/>
+	
+		
+		<h:commandButton value="Guardar" action="#{studentBean.nuevo()}" />
+		<br/> <br/> 
+		<button class="favorite styled" type="button" onclick="location.href='http://localhost:8082/StudentCrud/faces/students.xhtml'">Go Back</button>
+		<br/> <br/>
+	</h:form>
+	</div> 
+</h:body>
+</html>

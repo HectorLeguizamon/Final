@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Students List</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+	<div class="content">
+		<h2>Edit Students</h2>
+	</div>
+	<h:form>
+		Ingrese el Id del Estudainte a elminar: <h:inputText id="txtIDD" value="#{studentBean.tid}" /> <br/> <br/>
+		<h:commandButton value="Go" action="#{studentBean.mostrar()}" /> <br/> <br/>
+		name: <h:outputText id="txtNoombre" value="#{studentBean.tnombre}" /> <br/> <br/>
+		email: <h:outputText id="txtNoombre2" value="#{studentBean.tcorreo}" /> <br/> <br/>
+		password: <h:outputText id="txtNoombre3" value="#{studentBean.tpassword}" /> <br/> <br/>
+		gender: <h:outputText id="txtNoombre4" value="#{studentBean.tgenero}" /> <br/> <br/>
+		address: <h:outputText id="txtNoombre5" value="#{studentBean.tciudad}" /> <br/> <br/>
+		
+		<h:commandButton value="Borrar" action="#{studentBean.borrar()}" />
+		<br/> <br/> 
+		<button class="favorite styled" type="button" onclick="location.href='http://localhost:8082/StudentCrud/faces/students.xhtml'">Go Back</button>
+		<br/> <br/>
+		
+	</h:form>
+</h:body>
+</html>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>Students List</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+	<div class="content">
+		<h2>Students List</h2>
+	</div>
+	<h:form>
+		<h:dataTable value="#{studentBean.students}" var="o"
+			styleClass="order-table" headerClass="order-table-header"
+    		rowClasses="order-table-odd-row,order-table-even-row">
+
+			<h:column>
+
+				<f:facet name="header">Id</f:facet>
+
+				<h:inputText value="#{o.id}" size="10" rendered="#{o.editable}" />
+
+
+				<h:outputText value="#{o.id}" rendered="#{not o.editable}" />
+
+			</h:column>
+
+			<h:column>
+
+				<f:facet name="header">Name</f:facet>
+
+				<h:inputText value="#{studentBean.tnombre}" size="20"
+					rendered="#{o.editable}" />
+
+				<h:outputText value="#{o.name}" rendered="#{not o.editable}" />
+
+			</h:column>
+
+			<h:column>
+
+				<f:facet name="header">Email</f:facet>
+
+				<h:inputText value="#{o.employee}" size="10" rendered="#{o.editable}" />
+
+				<h:outputText value="#{o.employee}" rendered="#{not o.editable}" />
+
+			</h:column>
+
+			<h:column>
+
+				<f:facet name="header">Password</f:facet>
+
+				<h:inputText value="#{o.loan_date}" size="5" rendered="#{o.editable}" />
+
+				<h:outputText value="#{o.loan_date}" rendered="#{not o.editable}" />
+
+			</h:column>
+
+			<h:column>
+
+				<f:facet name="header">Gender</f:facet>
+
+				<h:inputText value="#{o.deliver_date}" size="5" rendered="#{o.editable}" />
+
+				<h:outputText value="#{o.deliver_date}" rendered="#{not o.editable}" />
+
+			</h:column>
+
+			<h:column>
+
+				<f:facet name="header">Address</f:facet>
+
+				<h:inputText value="#{o.user_library}" size="5" rendered="#{o.editable}" />
+
+				<h:outputText value="#{o.user_library}" rendered="#{not o.editable}" />
+			</h:column>
+				<h:column>
+					<f:facet name="header"></f:facet>
+					<h:commandButton value="Quitar Fila"
+						action="#{studentBean.borrar2(o)}">
+						<f:param name="header" value="true" />
+					</h:commandButton>
+				</h:column>
+				<h:column>
+				<f:facet name="header">Action</f:facet>
+
+				<h:commandLink value="Edit" action="#{studentBean.editAction(o)}"
+					rendered="#{not o.editable}" />
+
+			</h:column>
+			<h:column>
+			<h:commandButton value="Save Changes" action="#{studentBean.saveAction}" />
+			</h:column>
+		</h:dataTable>
+
+
+
+		<button class="favorite styled" type="button"
+			onclick="location.href='http://localhost:8082/StudentCrud/faces/add.xhtml'">Edit
+			Student</button>
+		<button class="favorite styled" type="button"
+			onclick="location.href='http://localhost:8082/StudentCrud/faces/createStudent.xhtml'">New</button>
+		<button class="favorite styled" type="button"
+			onclick="location.href='http://localhost:8082/StudentCrud/faces/deleteStudent.xhtml'">Delete</button>
+
+	</h:form>
+</h:body>
+</html>

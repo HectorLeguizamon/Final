@@ -1,0 +1,14 @@
+package com.accenture.crud.service;
+
+import java.util.List;
+
+import com.accenture.crud.model.Library;
+
+public interface LibraryService {
+	public void createStudent(Library library);
+	public Library getStudentById(int id);
+	public List<Library> getStudents();
+	public void updateStudent(Library library);
+	public void deleteStudent(int id);
+
+}

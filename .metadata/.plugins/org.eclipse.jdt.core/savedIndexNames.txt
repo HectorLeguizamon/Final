@@ -17,7 +17,6 @@ INDEX VERSION 1.131+C:\Users\hector.leguizamon\eclipse-workspace\Clase_j\.metada
 2327184759.index
 145152164.index
 1607282252.index
-4215630666.index
 2027117169.index
 2994552673.index
 2115263675.index

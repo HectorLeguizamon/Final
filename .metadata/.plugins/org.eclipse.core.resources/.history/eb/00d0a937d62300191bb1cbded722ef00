@@ -1,0 +1,44 @@
+package com.accenture.crud.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.accenture.crud.dao.StudentDAO;
+import com.accenture.crud.model.Library;
+
+@Service
+@Transactional
+public class StudentServiceImpl implements StudentService {
+	
+	@Autowired
+	private StudentDAO studentDAO;
+
+	@Override
+	public void createStudent(Library library) {
+		studentDAO.createStudent(library);
+	}
+
+	@Override
+	public Library getStudentById(int id) {
+		return studentDAO.getStudentById(id);
+	}
+
+	@Override
+	public List<Library> getStudents() {
+		return studentDAO.getStudents();
+	}
+
+	@Override
+	public void updateStudent(Library library) {
+		studentDAO.updateStudent(library);
+	}
+
+	@Override
+	public void deleteStudent(int id) {
+		studentDAO.deleteStudent(id);
+	}
+
+}
